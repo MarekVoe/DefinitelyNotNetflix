@@ -27,8 +27,13 @@ public class MovieServiceImpl implements IMovieService {
 
     @Override
     public Movie updateMovie(Movie movie, Long movieID) {
-        // TODO: IMPLEMENT UPDATE
-        return null;
+        Movie existingMovie = movieRepository.findById(movieID)
+                .orElseThrow(() -> new RuntimeException("Movie not found"));
+        existingMovie.setTitle(movie.getTitle());
+        existingMovie.setDescription(movie.getDescription());
+        existingMovie.setDuration(movie.getDuration());
+        existingMovie.setReleaseDate(movie.getReleaseDate());
+        return movieRepository.save(existingMovie);
     }
 
     @Override
