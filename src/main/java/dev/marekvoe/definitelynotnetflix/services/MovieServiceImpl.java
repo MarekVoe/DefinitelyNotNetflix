@@ -4,6 +4,7 @@ import dev.marekvoe.definitelynotnetflix.models.Movie;
 import dev.marekvoe.definitelynotnetflix.repositories.IMovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Objects;
@@ -25,13 +26,13 @@ public class MovieServiceImpl implements IMovieService {
     }
 
     @Override
-    public Movie updateMovie(Movie movie, int movieID) {
+    public Movie updateMovie(Movie movie, Long movieID) {
         // TODO: IMPLEMENT UPDATE
         return null;
     }
 
     @Override
-    public void deleteMovie(int movieID) {
+    public void deleteMovie(Long movieID) {
         movieRepository.deleteById(movieID);
     }
 }

@@ -20,7 +20,10 @@ public class Movie {
 
     private String title;
     private String description;
+
+    @Column(name="release_date")
     private LocalDate releaseDate;
+
     private int duration;
 
     private boolean available;

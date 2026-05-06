@@ -7,6 +7,6 @@ import java.util.List;
 public interface IMovieService {
     Movie saveMovie(Movie movie);
     List<Movie> getAllMovies();
-    Movie updateMovie(Movie movie, int movieID);
-    void deleteMovie(int movieID);
+    Movie updateMovie(Movie movie, Long movieID);
+    void deleteMovie(Long movieID);
 }

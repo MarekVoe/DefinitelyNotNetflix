@@ -45,3 +45,6 @@ build/
 ### DB files ###
 *.h2.db
 *.mv.db
+
+### Personal .md file ###
+PERSONAL.md
